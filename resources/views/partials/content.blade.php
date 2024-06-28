@@ -1,15 +1,16 @@
-<article @php(post_class())>
+<article @php(post_class('flex flex-col gap-xs sm:gap-sm'))>
+  
   <header>
-    <h2 class="entry-title">
+    <x-headline html="h2" class="entry-title">
       <a href="{{ get_permalink() }}">
         {!! $title !!}
       </a>
-    </h2>
+    </x-headline>
 
     @include('partials.entry-meta')
   </header>
 
-  <div class="entry-summary">
+  <x-copy class="entry-summary">
     @php(the_excerpt())
-  </div>
+  </x-copy>
 </article>

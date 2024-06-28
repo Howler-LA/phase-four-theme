@@ -1,3 +1,7 @@
-<div class="page-header">
-  <h1>{!! $title !!}</h1>
-</div>
+<x-wrapper class='page-header'>
+  <x-container>
+    <x-headline html="h1">
+      {!! $title !!}
+    </x-headline>
+  </x-container>
+</x-wrapper>

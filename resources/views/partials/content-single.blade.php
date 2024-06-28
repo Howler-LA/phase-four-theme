@@ -1,23 +1,20 @@
-<article @php(post_class('h-entry'))>
-  <header>
-    <h1 class="p-name">
-      {!! $title !!}
-    </h1>
-
+<x-wrapper html="article" class="flex flex-col gap-xs sm:gap-sm">
+  
+  <x-container html="header">
+    <x-headline html="h1" class="p-name" message="{!! $title !!}" />
     @include('partials.entry-meta')
-  </header>
+  </x-container>
 
-  <div class="e-content">
-    @php(the_content())
-  </div>
+  <x-container class="e-content">
+    <x-copy message="{!! the_content() !!}" />
+  </x-container>
 
   @if ($pagination)
-    <footer>
+    <x-container html="footer">
       <nav class="page-nav" aria-label="Page">
         {!! $pagination !!}
       </nav>
-    </footer>
+    </x-container>
   @endif
 
-  @php(comments_template())
-</article>
+</x-wrapper>

@@ -1249,6 +1249,21 @@
           "color": "#4c0519",
           "name": "Rose 950",
           "slug": "rose-950"
+        },
+        {
+          "color": "#fff",
+          "name": "Background",
+          "slug": "background"
+        },
+        {
+          "color": "#333",
+          "name": "Foreground",
+          "slug": "foreground"
+        },
+        {
+          "color": "#eee",
+          "name": "Border",
+          "slug": "border"
         }
       ]
     },

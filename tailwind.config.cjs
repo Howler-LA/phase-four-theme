@@ -1,5 +1,6 @@
-/** @type {import('tailwindcss').Config} config */
-const config = {
+const defaultTheme = require('tailwindcss/defaultTheme')
+
+module.exports = {
   content: ['./app/**/*.php', './resources/**/*.{php,vue,js}'],
   theme: {
     container: {
@@ -7,6 +8,11 @@ const config = {
       padding: '24px'
     },
     extend: {
+      colors: {
+        'background':'#fff',
+        'foreground':'#333',
+        'border':'#eee'
+      },
       spacing: {
         'xs':'12px',
         'sm':'24px',
@@ -23,7 +29,8 @@ const config = {
       }
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/typography'),
+    require('@tailwindcss/forms'),
+  ],
 };
-
-export default config;

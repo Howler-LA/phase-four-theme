@@ -1,3 +1,5 @@
-<footer class="content-info">
-  @php(dynamic_sidebar('sidebar-footer'))
-</footer>
+<x-wrapper html="footer">
+  <x-container>
+    @php(dynamic_sidebar('sidebar-footer'))
+  </x-container>
+</x-wrapper>
