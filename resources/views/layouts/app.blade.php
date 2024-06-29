@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="antialiased text-[15px] bg-white text-gray-800" @php(language_attributes())>
+<html class="antialiased text-[15px]" @php(language_attributes())>
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -20,12 +20,6 @@
       <main id="main" class="main">
         @yield('content')
       </main>
-
-      @hasSection('sidebar')
-        <aside class="sidebar">
-          @yield('sidebar')
-        </aside>
-      @endif
 
       @include('sections.footer')
     </div>

@@ -5,7 +5,6 @@ module.exports = {
   theme: {
     container: {
       center: true,
-      padding: '24px'
     },
     extend: {
       colors: {
