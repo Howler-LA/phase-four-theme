@@ -17,8 +17,16 @@ return [
     */
 
     'defaults' => [
-        // 'trueFalse' => ['ui' => 1],
-        // 'select' => ['ui' => 1],
+        'trueFalse'     => ['ui' => 1],
+        'select'        => ['ui' => 1],
+        'image'         => ['return_format' => 'id','preview_size'=>'original'],
+        'gallery'       => ['return_format' => 'id','preview_size'=>'large'],
+        'file'          => ['return_format' => 'id'],
+        'relationship'  => ['return_format' => 'id'],                
+        'wysiwyg'       => ['tabs'=>'visual','media_upload'=>0],
+        'textarea'      => ['rows'=>2],
+        'repeater'      => ['layout'=>'row'],
+        'group'         => ['layout'=>'row'],
     ],
 
     /*
