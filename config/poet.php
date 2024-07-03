@@ -13,15 +13,15 @@ return [
     */
 
     'post' => [
-        'book' => [
-            'enter_title_here' => 'Enter book title',
+        'people' => [
+            'enter_title_here' => 'Enter people title',
             'menu_icon' => 'dashicons-book-alt',
             'supports' => ['title', 'editor', 'author', 'revisions', 'thumbnail'],
             'show_in_rest' => true,
             'has_archive' => false,
             'labels' => [
-                'singular' => 'Book',
-                'plural' => 'Books',
+                'singular' => 'Person',
+                'plural' => 'People',
             ],
         ],
     ],
@@ -37,10 +37,10 @@ return [
     */
 
     'taxonomy' => [
-        'genre' => [
-            'links' => ['book'],
-            'meta_box' => 'radio',
-        ],
+        // 'role' => [
+        //     'links' => ['people'],
+        //     'meta_box' => 'radio',
+        // ],
     ],
 
     /*

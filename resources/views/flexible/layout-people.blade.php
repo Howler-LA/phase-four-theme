@@ -6,10 +6,14 @@
         <x-type.headline message="{!! $content['headline'] !!}" />
         <x-type.copy message="{!! $content['copy'] !!}" />
       </div>
-      <x-layout.grid>
-        @repeat(3)
-          <x-card.person />
-        @endrepeat
+      <x-layout.grid columns="4">
+        @posts($query)
+          <x-card.person 
+            thumbnail="{{ get_post_thumbnail_id() }}"
+            name="{{ get_the_title() }}" 
+            position="{{ get_field('content_role') }}" 
+          />
+        @endposts
       </x-layout.grid>
     </x-layout-list>
   </x-container>

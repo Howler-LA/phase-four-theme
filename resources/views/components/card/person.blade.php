@@ -1,14 +1,18 @@
 @props([
   'name' => null,
   'position' => null,
+  'thumbnail' => null,
 ])
 
 <div>
-  <img 
-    class="aspect-[14/13] w-full object-cover rounded-md" 
-    src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80" 
-    alt=""
-  />
+  <div class="relative">
+    <img 
+      class="aspect-[14/13] w-full object-cover rounded-md" 
+      src="@image($thumbnail,'raw')" 
+      alt=""
+    />
+    <div class="absolute inset-0 ring-1 ring-inset ring-black/10 rounded-md"></div>
+  </div>
   <h3 class="mt-xs sm:mt-sm">{!! $name !!}</h3>
   <p class="opacity-50">{!! $position !!}</p>
   <ul role="list" class="mt-xs sm:mt-sm flex justify-start gap-x-xs sm:gap-x-sm">
